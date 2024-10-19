@@ -77,7 +77,7 @@ const InquirySelectionDialog = ({
             <li
               key={consultant.id}
               className={cn(
-                inquiry?.consultantId === consultant.id && "bg-black/30",
+                inquiry?.consultantName === consultant.name && "bg-black/30",
                 "rounded-md"
               )}
             >
@@ -87,7 +87,7 @@ const InquirySelectionDialog = ({
                 variant="ghost"
                 className={cn(
                   "w-full",
-                  inquiry?.consultantId === consultant.id && "font-bold"
+                  inquiry?.consultantName === consultant.name && "font-bold"
                 )}
               >
                 {consultant.id} {consultant.name} {consultant.phoneNumber}
