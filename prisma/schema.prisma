@@ -1,0 +1,35 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Consultation {
+  id          Int     @id @default(autoincrement())
+  phoneNumber String
+  car         String
+  ipAddress   String?
+  device      String?
+
+  consultantName        String?
+  consultantPhoneNumber String?
+
+  createdAt DateTime @default(now())
+}
+
+model Admin {
+  id       String @id @default(cuid())
+  username String @unique
+  password String
+}
+
+model Consultant {
+  id          Int      @id @default(autoincrement())
+  name        String
+  phoneNumber String
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+}
