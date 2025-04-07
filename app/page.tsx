@@ -244,7 +244,7 @@ export default function Home() {
                 className="self-start -translate-y-2"
               />
               <p className="flex flex-col gap-4 self-end ml-auto sm:ml-0">
-                <span className="">JK중고차수출</span>
+                <span className="">전국중고차수출</span>
                 <span className="sm:twenty font-extrabold">문의하기</span>
               </p>
             </li>
@@ -260,7 +260,7 @@ export default function Home() {
                 className="self-start -translate-y-2 scale-110"
               />
               <p className="flex flex-col gap-4 self-end ml-auto sm:ml-0">
-                <span className="">JK중고차수출</span>
+                <span className="">전국중고차수출</span>
                 <span className="sm:twenty font-extrabold">중고차 직수출</span>
               </p>
             </li>
@@ -276,7 +276,7 @@ export default function Home() {
                 className="self-start -translate-y-2"
               />
               <p className="flex flex-col gap-4 self-end ml-auto sm:ml-0">
-                <span className="">JK중고차수출</span>
+                <span className="">전국중고차수출</span>
                 <span className="sm:twenty font-extrabold">소개</span>
               </p>
             </li>

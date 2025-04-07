@@ -23,9 +23,9 @@ const NotoSans = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: "JK중고차수출",
+  title: "전국중고차수출",
   description:
-    "JK중고차수출은 중고차 해외 수출 전문 업체로, 한국 중고차의 수출 절차, 비용, 등 자세한 상담을 도와드리며, 전 세계 다양한 국가에 신속하게 중고차를 수출합니다.",
+    "전국중고차수출은 중고차 해외 수출 전문 업체로, 한국 중고차의 수출 절차, 비용, 등 자세한 상담을 도와드리며, 전 세계 다양한 국가에 신속하게 중고차를 수출합니다.",
   keywords: [
     "중고차 수출",
     "중고차 해외 수출",
@@ -57,9 +57,9 @@ export const metadata: Metadata = {
     images: "https://daehancar.com/img/daehan-logo.png",
     type: "website",
     url: `https://daehancar.com`,
-    title: `JK중고차수출`,
+    title: `전국중고차수출`,
     description:
-      "JK중고차수출은 한국의 중고차를 전 세계로 수출하는 전문 업체입니다. 신속하고 신뢰할 수 있는 수출 절차를 통해 고객에게 최고의 서비스를 제공합니다.",
+      "전국중고차수출은 한국의 중고차를 전 세계로 수출하는 전문 업체입니다. 신속하고 신뢰할 수 있는 수출 절차를 통해 고객에게 최고의 서비스를 제공합니다.",
   },
   icons: { icon: "/favicon.ico" },
   other: {

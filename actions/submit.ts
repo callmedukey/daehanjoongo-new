@@ -82,7 +82,7 @@ export async function submitInquiry(formData: z.infer<typeof formSchema>) {
         ?.phoneNumber.replaceAll("-", "") as string,
       from: process.env.SOLAPI_SENDER_PHONE_NUMBER as string,
       text: `
-      JK중고차수출
+      전국중고차수출
       차량: ${car}
       연락처: ${phone}
       `,

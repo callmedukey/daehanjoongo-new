@@ -16,8 +16,7 @@ const Header = () => {
         <Image
           src={Logo}
           alt="로고"
-          width={250}
-          className=""
+          className="w-[300px]"
           priority
           loading="eager"
           quality={100}

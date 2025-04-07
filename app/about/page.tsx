@@ -23,7 +23,7 @@ const AboutPage = () => {
         <div className="z-10 font-bold space-y-6 flex flex-col md:text-left twoTwoFive">
           <h1 className="text-primary">중고차 직수출의 신뢰와 전문성!</h1>
           <p className="text-white md:text-left">
-            JK중고차수출에서{" "}
+            전국중고차수출에서{" "}
             <span className="text-primary"> 믿을 수 있는</span> <br />
             중고차 거래의 새로운 기준을 만나보세요
           </p>
@@ -46,11 +46,11 @@ const AboutPage = () => {
                 중고차 직수출 업계의 Number 1
               </span>
               <span className="text-primary threeRem font-bold">
-                JK중고차수출
+                전국중고차수출
               </span>
             </h2>
             <p className="mt-[clamp(2rem,8vw,6rem)] max-w-2xl mx-auto text-center xl:text-left leading-loose">
-              <span className="font-bold twenty">JK중고차수출은</span>{" "}
+              <span className="font-bold twenty">전국중고차수출은</span>{" "}
               체계적인 시스템과 전문 인력의{" "}
               <span className="font-bold twenty">신뢰를 바탕으로</span>, 국내
               차량의 가치를 인정받아 다양한 국가로 중고차를 수출하고 있습니다.
@@ -61,7 +61,7 @@ const AboutPage = () => {
               온라인 플랫폼과 해외 지사를 통해 중남미, 아프리카, 중동 및 아시아
               지역의 다양한 해외 고객에게 매년 2,500대 이상의 차량을 수출하고
               있으며, 오랜 기간 신뢰할 수 있는 거래를 이어가고 있습으며
-              JK중고차수출은 정직 바탕으로{" "}
+              전국중고차수출은 정직 바탕으로{" "}
               <span className="font-bold twenty">고객의 소중한 차량을</span>{" "}
               안전하게 매입할 것을 약속드리며, 중고차 수출의 발전을 위해
               끊임없이 노력하겠습니다!
@@ -95,7 +95,7 @@ const AboutPage = () => {
               내 차를 파를 다른 방법은 없을까?
               <br />
               <span className="text-primary threeRem font-bold">
-                JK중고차수출
+                전국중고차수출
               </span>
             </h3>
             <p className="mt-[clamp(2rem,8vw,4rem)] leading-loose max-w-2xl mx-auto">
@@ -103,7 +103,7 @@ const AboutPage = () => {
               <span className="font-bold twenty">새로운 대안!</span> 자신의
               차량을 국내 판매 가격은 물론, 해외 중고차 직수출 가격과 비교하여
               보다 합리적인 판매 방안을 제공합니다. 중고차 수출, 생각보다
-              간단합니다! 복잡하고 번거로운 차량 판매 과정, JK중고차수출이
+              간단합니다! 복잡하고 번거로운 차량 판매 과정, 전국중고차수출이
               훨씬 더 <span className="font-bold twenty">쉽고 간편하게</span>{" "}
               도와드리겠습니다.
             </p>
@@ -115,7 +115,7 @@ const AboutPage = () => {
               가장 높은 가격에 판매하는 방법!
               <br />
               <span className="text-primary threeRem font-bold">
-                JK중고차수출
+                전국중고차수출
               </span>
             </h4>
             <p className="mt-[clamp(2rem,8vw,4rem)] leading-loose max-w-3xl mx-auto">
