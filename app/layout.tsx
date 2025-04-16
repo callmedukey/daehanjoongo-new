@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer";
 import Script from "next/script";
 import FixedAside from "@/components/layout/FixedAside";
 import Partners from "@/components/layout/Partners";
-
+import { GoogleTagManager } from "@next/third-parties/google";
 const Pretendard = localFont({
   src: "./fonts/PretendardVariable.woff2",
   variable: "--font-pretendard",
@@ -74,6 +74,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <GoogleTagManager gtmId="Your ID Goes Here" />
       <body
         className={`${Pretendard.variable} ${NotoSans.variable}  isolate antialiased leading-normal break-keep font-medium text-secondaryText`}
       >

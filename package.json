@@ -15,6 +15,7 @@
   "browserslist": "> 0.5%, last 10 versions, not ie <= 11, not ie_mob <= 11",
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
+    "@next/third-parties": "^15.3.0",
     "@prisma/client": "^5.20.0",
     "@radix-ui/react-checkbox": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.1",
