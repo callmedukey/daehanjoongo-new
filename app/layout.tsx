@@ -74,7 +74,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <GoogleTagManager gtmId="Your ID Goes Here" />
+      <GoogleTagManager gtmId="GTM-5CSFNVJL" />
+
       <body
         className={`${Pretendard.variable} ${NotoSans.variable}  isolate antialiased leading-normal break-keep font-medium text-secondaryText`}
       >
