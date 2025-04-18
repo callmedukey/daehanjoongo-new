@@ -49,9 +49,9 @@ const InquiryForm = () => {
     }
   };
 
-  const test = () => {
-    triggerEvent();
-  };
+  // const test = () => {
+  //   triggerEvent();
+  // };
 
   return (
     <Form {...form}>
@@ -155,10 +155,9 @@ const InquiryForm = () => {
           )}
         />
         <Button
-          // type="submit"
-          type="button"
+          type="submit"
           disabled={isLoading}
-          onClick={test}
+          // onClick={test}
           className="sm:twenty font-notoSans font-normal text-sm flex items-center mx-auto py-3 xl:pr-8 h-full leading-relaxed xl:leading-none flex-wrap relative hover:-translate-y-2 transition-all duration-300 gap-2 blinking-element"
         >
           <Image
