@@ -8,7 +8,6 @@ import Script from "next/script";
 import FixedAside from "@/components/layout/FixedAside";
 import Partners from "@/components/layout/Partners";
 import { GoogleTagManager } from "@next/third-parties/google";
-
 const Pretendard = localFont({
   src: "./fonts/PretendardVariable.woff2",
   variable: "--font-pretendard",
@@ -80,6 +79,33 @@ export default function RootLayout({
         async
         src="https://www.googletagmanager.com/gtag/js?id=AW-17008053663"
       ></Script>
+      <Script id="gtag-init" async>
+        {`
+     window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17008053663');
+        `}
+      </Script>
+
+      <Script id="gtag-report-conversion">
+        {`
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17008053663/bM_uCP7e2bkaEJ-bia4_',
+      'event_callback': callback
+  });
+  return false;
+}
+        `}
+      </Script>
+
       <body
         className={`${Pretendard.variable} ${NotoSans.variable}  isolate antialiased leading-normal break-keep font-medium text-secondaryText`}
       >
