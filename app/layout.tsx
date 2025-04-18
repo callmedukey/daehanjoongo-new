@@ -75,8 +75,10 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <GoogleTagManager gtmId="GTM-NGFQKHPN" />
-      <GoogleTagManager gtmId="AW-17008053663" />
-
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=AW-17008053663"
+      ></Script>
       <body
         className={`${Pretendard.variable} ${NotoSans.variable}  isolate antialiased leading-normal break-keep font-medium text-secondaryText`}
       >
