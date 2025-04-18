@@ -8,6 +8,7 @@ import Script from "next/script";
 import FixedAside from "@/components/layout/FixedAside";
 import Partners from "@/components/layout/Partners";
 import { GoogleTagManager } from "@next/third-parties/google";
+
 const Pretendard = localFont({
   src: "./fonts/PretendardVariable.woff2",
   variable: "--font-pretendard",

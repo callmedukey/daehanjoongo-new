@@ -39,14 +39,14 @@ const InquiryForm = () => {
     if (!data.agreement) {
       return alert("개인 정보 수집/이용 동의를 해야 합니다.");
     }
-    // const result = await submitInquiry(data);
+    const result = await submitInquiry(data);
 
-    // if (result.message) {
-    //   triggerEvent();
-    //   alert(result.message);
-    //   form.reset();
-    //   setIsLoading(false);
-    // }
+    if (result.message) {
+      triggerEvent();
+      alert(result.message);
+      form.reset();
+      setIsLoading(false);
+    }
   };
 
   const test = () => {
@@ -155,9 +155,7 @@ const InquiryForm = () => {
           )}
         />
         <Button
-          // type="submit"
-          type="button"
-          onClick={test}
+          type="submit"
           disabled={isLoading}
           className="sm:twenty font-notoSans font-normal text-sm flex items-center mx-auto py-3 xl:pr-8 h-full leading-relaxed xl:leading-none flex-wrap relative hover:-translate-y-2 transition-all duration-300 gap-2 blinking-element"
         >

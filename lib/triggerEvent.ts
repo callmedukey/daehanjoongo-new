@@ -1,4 +1,4 @@
-import { sendGTMEvent, sendGAEvent } from "@next/third-parties/google";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 export const triggerEvent = () => {
   console.log("구글전환완료");
