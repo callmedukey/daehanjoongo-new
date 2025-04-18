@@ -19,6 +19,7 @@ import { submitInquiry } from "@/actions/submit";
 import { useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { triggerEvent } from "@/lib/triggerEvent";
 
 const InquiryForm = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -41,6 +42,7 @@ const InquiryForm = () => {
     const result = await submitInquiry(data);
 
     if (result.message) {
+      triggerEvent();
       alert(result.message);
       form.reset();
       setIsLoading(false);
