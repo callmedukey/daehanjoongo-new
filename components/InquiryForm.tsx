@@ -27,7 +27,8 @@ const InquiryForm = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       car: "",
-      phone: "010",
+      phone2: "",
+      phone3: "",
       agreement: true,
     },
   });
@@ -39,6 +40,7 @@ const InquiryForm = () => {
     if (!data.agreement) {
       return alert("개인 정보 수집/이용 동의를 해야 합니다.");
     }
+
     const result = await submitInquiry(data);
 
     if (result.message) {
@@ -48,10 +50,6 @@ const InquiryForm = () => {
       setIsLoading(false);
     }
   };
-
-  // const test = () => {
-  //   triggerEvent();
-  // };
 
   return (
     <Form {...form}>
@@ -76,7 +74,7 @@ const InquiryForm = () => {
                 htmlFor={field.name}
                 ref={field.ref}
                 className={cn(
-                  "absolute left-20 top-1 text-24 flex flex-col gap-2",
+                  "absolute left-20 top-1 text-24 flex flex-col gap-2 select-none",
                   field.value && "sr-only"
                 )}
               >
@@ -87,6 +85,8 @@ const InquiryForm = () => {
                 <Input
                   className="!mt-0 h-20 rounded-none bg-inputBg pl-20 placeholder:invisible"
                   placeholder="ex) K5"
+                  type="text"
+                  maxLength={11}
                   {...field}
                 />
               </FormControl>
@@ -94,37 +94,60 @@ const InquiryForm = () => {
             </FormItem>
           )}
         />
-        <FormField
-          control={form.control}
-          name="phone"
-          render={({ field }) => (
-            <FormItem className="flex items-center gap-8">
-              <FormLabel className="h-full font-medium !twenty min-w-[3rem] sr-only">
-                연락처
-              </FormLabel>
-              <FormControl>
-                <Input
-                  className="!mt-0 h-20 rounded-none bg-inputBg pl-6"
-                  placeholder="010"
-                  {...field}
-                  onChange={(e) => {
-                    let value = e.target.value.replace(/\D/g, "");
-                    if (value.length > 3 && value.length <= 7) {
-                      value = `${value.slice(0, 3)}-${value.slice(3)}`;
-                    } else if (value.length > 7) {
-                      value = `${value.slice(0, 3)}-${value.slice(
-                        3,
-                        7
-                      )}-${value.slice(7, 11)}`;
-                    }
-                    field.onChange(value.slice(0, 13));
-                  }}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        <div className="flex items-center gap-2">
+          <FormLabel className="h-full font-medium !twenty min-w-[3rem] sr-only">
+            연락처
+          </FormLabel>
+          <div className="flex items-center justify-center !mt-0 h-20 w-1/4 rounded-none border border-input bg-inputBg px-3 py-2 text-sm ring-offset-background">
+            010
+          </div>
+          <span className="text-muted-foreground">-</span>
+          <FormField
+            control={form.control}
+            name="phone2"
+            render={({ field }) => (
+              <FormItem className="w-1/3">
+                <FormControl>
+                  <Input
+                    className="!mt-0 h-20 rounded-none bg-inputBg pl-6 hide-number-spinners"
+                    maxLength={4}
+                    type="number"
+                    placeholder="1234"
+                    {...field}
+                    onChange={(e) => {
+                      const value = e.target.value.replace(/\D/g, "");
+                      field.onChange(value);
+                    }}
+                  />
+                </FormControl>
+                <FormMessage className="absolute" />
+              </FormItem>
+            )}
+          />
+          <span className="text-muted-foreground">-</span>
+          <FormField
+            control={form.control}
+            name="phone3"
+            render={({ field }) => (
+              <FormItem className="w-1/3">
+                <FormControl>
+                  <Input
+                    className="!mt-0 h-20 rounded-none bg-inputBg pl-6 hide-number-spinners"
+                    maxLength={4}
+                    type="number"
+                    placeholder="5678"
+                    {...field}
+                    onChange={(e) => {
+                      const value = e.target.value.replace(/\D/g, "");
+                      field.onChange(value);
+                    }}
+                  />
+                </FormControl>
+                <FormMessage className="absolute" />
+              </FormItem>
+            )}
+          />
+        </div>
         <FormField
           control={form.control}
           name="agreement"
@@ -157,7 +180,6 @@ const InquiryForm = () => {
         <Button
           type="submit"
           disabled={isLoading}
-          // onClick={test}
           className="sm:twenty font-notoSans font-normal text-sm flex items-center mx-auto py-3 xl:pr-8 h-full leading-relaxed xl:leading-none flex-wrap relative hover:-translate-y-2 transition-all duration-300 gap-2 blinking-element"
         >
           <Image

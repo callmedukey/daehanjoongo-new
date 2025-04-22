@@ -29,7 +29,8 @@ export async function submitInquiry(formData: z.infer<typeof formSchema>) {
       rawDevice.type === undefined ||
       !["wearable", "mobile"].includes(rawDevice.type);
 
-    const { car, phone } = validated.data;
+    const { car } = validated.data;
+    const fullPhoneNumber = `010-${validated.data.phone2}-${validated.data.phone3}`;
 
     const consultants = await prisma.consultant.findMany({
       where: {
@@ -56,7 +57,7 @@ export async function submitInquiry(formData: z.infer<typeof formSchema>) {
     const consultation = await prisma.consultation.create({
       data: {
         car,
-        phoneNumber: phone,
+        phoneNumber: fullPhoneNumber,
         ipAddress,
         device: isDesktop ? "컴퓨터" : "모바일",
         consultantName: consultants.find(
@@ -84,7 +85,7 @@ export async function submitInquiry(formData: z.infer<typeof formSchema>) {
       text: `
       전국중고차수출
       차량: ${car}
-      연락처: ${phone}
+      연락처: ${fullPhoneNumber}
       `,
     });
 
