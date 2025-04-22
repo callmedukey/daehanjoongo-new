@@ -112,10 +112,14 @@ const InquiryForm = () => {
                     className="!mt-0 h-20 rounded-none bg-inputBg pl-6 hide-number-spinners"
                     maxLength={4}
                     type="number"
+                    inputMode="numeric"
                     placeholder="1234"
                     {...field}
                     onChange={(e) => {
                       const value = e.target.value.replace(/\D/g, "");
+                      if (value.length > 4) {
+                        return;
+                      }
                       field.onChange(value);
                     }}
                   />
@@ -135,10 +139,14 @@ const InquiryForm = () => {
                     className="!mt-0 h-20 rounded-none bg-inputBg pl-6 hide-number-spinners"
                     maxLength={4}
                     type="number"
+                    inputMode="numeric"
                     placeholder="5678"
                     {...field}
                     onChange={(e) => {
                       const value = e.target.value.replace(/\D/g, "");
+                      if (value.length > 4) {
+                        return;
+                      }
                       field.onChange(value);
                     }}
                   />
