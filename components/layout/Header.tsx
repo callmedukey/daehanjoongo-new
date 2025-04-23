@@ -20,7 +20,7 @@ const Header = () => {
           window.location.href = "/";
         }}
       />
-      <a href="tel:050-8202-1309" className="size-8 md:hidden">
+      <a href="tel:0508-4265-3822" className="size-8 md:hidden">
         <Image
           src={DarkPhone}
           alt="모바일 폰"

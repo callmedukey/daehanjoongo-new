@@ -133,6 +133,9 @@ const InquiryForm = () => {
                         return;
                       }
                       field.onChange(value);
+                      if (value.length === 4) {
+                        form.setFocus("phone3");
+                      }
                     }}
                   />
                 </FormControl>

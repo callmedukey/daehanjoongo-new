@@ -18,7 +18,7 @@ const Footer = () => {
           </ul>
           <ul className="flex-1 basis-[12rem] space-y-2">
             <li>{`주소: 인천광역시 부평구 평천로255번길 13, 9층 908(청천동)`}</li>
-            <li>대표번호: 050-8202-1309</li>
+            <li>대표번호: 0508-4265-3822</li>
             <li>{`사업자등록번호: 681-25-01849`}</li>
           </ul>
           <div className="flex-1 basis-[15rem] ml-auto mr-0 w-full">

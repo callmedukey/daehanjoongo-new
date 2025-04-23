@@ -16,7 +16,7 @@ const FixedAside = () => {
         </Link>
         <a
           className="text-white bg-secondaryText items-center md:hidden flex justify-center w-full blinking-call-btn"
-          href="tel:050-8202-1309"
+          href="tel:0508-4265-3822"
         >
           전화 상담하기
         </a>
