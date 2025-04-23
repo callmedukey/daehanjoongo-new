@@ -1,27 +1,25 @@
-import Link from "next/link";
+"use client";
+
 import NavLink from "./NavLink";
 import Logo from "@/public/img/daehan-logo.png";
 import Image from "next/image";
 import MobileMenu from "./MobileMenu";
 import DarkPhone from "@/public/img/dark-phone.png";
-
 const Header = () => {
   return (
     <header className="sticky top-0 flex text-primary py-8 px-3 md:justify-center gap-2 justify-between items-center font-medium z-50 bg-white">
       <MobileMenu />
-      <Link
-        href="/"
-        className="md:absolute left-4 xl:left-16 top-0 bottom-0 self-center"
-      >
-        <Image
-          src={Logo}
-          alt="로고"
-          className="w-[300px]"
-          priority
-          loading="eager"
-          quality={100}
-        />
-      </Link>
+      <Image
+        src={Logo}
+        alt="로고"
+        className="w-[300px]"
+        priority
+        loading="eager"
+        quality={100}
+        onClick={() => {
+          window.location.href = "/";
+        }}
+      />
       <a href="tel:050-8202-1309" className="size-8 md:hidden">
         <Image
           src={DarkPhone}

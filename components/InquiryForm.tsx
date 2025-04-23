@@ -62,19 +62,23 @@ const InquiryForm = () => {
           control={form.control}
           name="car"
           render={({ field }) => (
-            <FormItem className="flex items-center relative">
+            <FormItem
+              className="flex items-center relative cursor-text"
+              onClick={() => {
+                form.setFocus(field.name);
+              }}
+            >
               <Image
                 src="/img/car.png"
                 alt="차량"
                 width={72}
                 height={72}
-                className="absolute"
+                className="absolute pointer-events-none"
               />
               <label
                 htmlFor={field.name}
-                ref={field.ref}
                 className={cn(
-                  "absolute left-20 top-1 text-24 flex flex-col gap-2 select-none",
+                  "absolute left-20 top-1 text-24 flex flex-col gap-2 select-none pointer-events-none",
                   field.value && "sr-only"
                 )}
               >
@@ -83,11 +87,19 @@ const InquiryForm = () => {
               </label>
               <FormControl>
                 <Input
+                  id={field.name}
                   className="!mt-0 h-20 rounded-none bg-inputBg pl-20 placeholder:invisible"
                   placeholder="ex) K5"
                   type="text"
                   maxLength={11}
                   {...field}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    if (value.length > 11) {
+                      return;
+                    }
+                    field.onChange(value);
+                  }}
                 />
               </FormControl>
               <FormMessage />
