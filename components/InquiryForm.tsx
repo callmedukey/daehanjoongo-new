@@ -102,7 +102,6 @@ const InquiryForm = () => {
                   }}
                 />
               </FormControl>
-              <FormMessage />
             </FormItem>
           )}
         />
@@ -139,7 +138,6 @@ const InquiryForm = () => {
                     }}
                   />
                 </FormControl>
-                <FormMessage className="absolute" />
               </FormItem>
             )}
           />
@@ -166,7 +164,6 @@ const InquiryForm = () => {
                     }}
                   />
                 </FormControl>
-                <FormMessage className="absolute" />
               </FormItem>
             )}
           />
