@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/duke/Documents/GitHub/daehanjoongo-new/logs/.0ab5873bdb52083879a6f8ade6b02bf4f5079449-audit.json",
+    "files": [
+        {
+            "date": 1754448916106,
+            "name": "/Users/duke/Documents/GitHub/daehanjoongo-new/logs/application-2025-08-06.log",
+            "hash": "b2af22c01ab3e49aba72ed10369fa97221e6746055ce16690b8316acdbb1bf66"
+        }
+    ],
+    "hashType": "sha256"
+}

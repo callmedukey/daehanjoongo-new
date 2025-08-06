@@ -12,14 +12,14 @@ const Footer = () => {
         </div>
         <div className="flex lg:gap-12 gap-6 text-white flex-wrap py-12 px-2">
           <ul className="lg:border-r border-white flex-1 basis-[6rem] space-y-2">
-            <li>{`상호명: 티앤에스(T&S)무역`}</li>
-            <li>{`대표: 장태산`}</li>
-            <li>{`사이트명: 전국중고차수출`}</li>
+            <li>{`상호명: 오케이(OK)무역`}</li>
+            <li>{`대표: 문창균`}</li>
+            <li>{`사이트명: OK중고차수출`}</li>
           </ul>
           <ul className="flex-1 basis-[12rem] space-y-2">
-            <li>{`주소: 인천광역시 부평구 평천로255번길 13, 9층 908(청천동)`}</li>
+            <li>{`주소: 인천광역시 부평구 안남로 62, 5층 501호(부평동, 해담빌딩)`}</li>
             <li>대표번호: 0508-4265-3822</li>
-            <li>{`사업자등록번호: 681-25-01849`}</li>
+            <li>{`사업자등록번호: 314-76-00485`}</li>
           </ul>
           <div className="flex-1 basis-[15rem] ml-auto mr-0 w-full">
             <p className="flex items-center lg:justify-end gap-2">
